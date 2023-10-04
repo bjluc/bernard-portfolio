@@ -1,3 +1,5 @@
+'use client'
+import Transition from "../components/Transition"
 // icons
 import {
   FaHtml5,
@@ -89,7 +91,7 @@ const aboutData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
-};
+  return <div><Transition />About</div>
+}
 
 export default About;
