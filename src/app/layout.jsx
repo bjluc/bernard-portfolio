@@ -20,7 +20,7 @@ const sora = Sora({
 import Nav from "./components/Nav"
 import Header from "./components/Header"
 import TopLeftImg from "./components/TopLeftImg"
-import Transition from "./components/Transition"
+//import Transition from "./components/Transition"
 
 
 export default function RootLayout({ children }) {
