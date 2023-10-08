@@ -27,18 +27,18 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key={0} />,
+          <FaCss3 key={1} />,
+          <FaJs key={2} />,
+          <FaReact key={3} />,
+          <SiNextdotjs key={4} />,
+          <SiFramer key={5} />,
+          <FaWordpress key={6} />,
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [<FaFigma key={7} />, <SiAdobexd key={8} />, <SiAdobephotoshop key={9} />],
       },
     ],
   },
@@ -133,7 +133,7 @@ const About = () => {
             animate="show" 
             exit="hidden"
         className='max-x-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-          10 years ago, I began freelancing as a developer. Since then, I've done remote work for agencies, consulted for startups, and  collaborated on digital products for business and consumer use.
+          10 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, consulted for startups, and  collaborated on digital products for business and consumer use.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -146,28 +146,28 @@ const About = () => {
               {/* experience */}
               <div className="relative flex1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent2 mb-2'>
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp key={index} start={0} end={10} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Years of experience</div>
               </div>
                 {/* clients */}
               <div className="relative flex1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent2 mb-2'>
-                  <CountUp start={0} end={50} duration={5} /> +
+                  <CountUp key={index} start={0} end={50} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Satisfied Clients</div>
               </div>
               {/* projects */}
               <div className="relative flex1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent2 mb-2'>
-                  <CountUp start={0} end={200} duration={5} /> +
+                  <CountUp key={index} start={0} end={200} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'> Finished Projects</div>
               </div>
                 {/* awards */}
             <div className="relative flex1">
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent2 mb-2'>
-                  <CountUp start={0} end={8} duration={5} /> +
+                  <CountUp key={index} start={0} end={8} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>Winning Awards</div>
               </div>
@@ -208,7 +208,7 @@ const About = () => {
                     <div className='flex gap-x-4'>
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex)=> {
-                      return <div className='text-2xl text-white'>{icon}</div>
+                      return <div key={itemIndex} className='text-2xl text-white'>{icon}</div>
                     })}
                     </div>
                   </div>
