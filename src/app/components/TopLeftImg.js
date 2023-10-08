@@ -7,7 +7,7 @@ const TopLeftImg = () => {
         priority={true}
         src='/top-left-img.png'
         width={400}
-        height={400}
+        height={0}
         alt=''
       />
     </div>

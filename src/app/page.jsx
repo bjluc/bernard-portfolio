@@ -1,8 +1,5 @@
 'use client'
 
-// next image
-import Image from "next/image"
-
 // components
 import Transition from "./components/Transition"
 import ParticlesContainer from "./components/ParticlesContainer"

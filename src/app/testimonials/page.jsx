@@ -3,6 +3,7 @@ import Transition from "../components/Transition"
 
 // components
 import TestimonialSlider from "../components/TestimonialSlider"
+import Circles from '../components/Circles'
 // framer motion
 import { motion } from 'framer-motion'
 // variants
@@ -12,6 +13,7 @@ const Testimonials = () => {
   return (
     <div className='h-full bg-primary/30 py-32 text-center'>
       <Transition />
+      <Circles />
       <div className='container mx-auto h-full flex flex-col justify-center'>
         {/* title */}
         <motion.h2
