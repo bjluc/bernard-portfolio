@@ -36,21 +36,21 @@ const aboutData = [
           <FaWordpress key={6} />,
         ],
       },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma key={7} />, <SiAdobexd key={8} />, <SiAdobephotoshop key={9} />],
-      },
+      // {
+      //   title: 'UI/UX Design',
+      //   icons: [<FaFigma key={7} />, <SiAdobexd key={8} />, <SiAdobephotoshop key={9} />],
+      // },
     ],
   },
   {
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
+        title: 'Webby Awards',
         stage: '2011 - 2012',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
+        title: 'Adobe Design Achievement Awards',
         stage: '2009 - 2010',
       },
     ],
@@ -76,15 +76,15 @@ const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
+        title: 'Web Development',
         stage: '2011',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
+        title: 'Computer Science Diploma',
         stage: '2009',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
+        title: 'Certified Graphic Designer',
         stage: '2006',
       },
     ],
@@ -132,7 +132,7 @@ const About = () => {
             initial="hidden" 
             animate="show" 
             exit="hidden"
-        className='max-x-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+        className='text-xs max-x-[500px] mx-auto xl:text-lg md:text-lg xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
           10 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, consulted for startups, and  collaborated on digital products for business and consumer use.
           </motion.p>
           {/* counters */}
@@ -189,7 +189,7 @@ const About = () => {
               className={`${
           index === itemIndex && 
           'text-accent2 after:w-[100%] after:bg-accent2 after:transition-all after:duration-300'
-          } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+          } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-accent2 after:absolute after:-bottom-1 after:left-0`}
           onClick={() => setIndex(itemIndex)}
           >{item.title}</div>
             )
@@ -199,7 +199,7 @@ const About = () => {
           {aboutData[index].info.map((item, itemIndex)=> {
             return (
               <div key={itemIndex}
-              className='flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60'
+              className='flex flex-1 flex-col md:flex-row max-w-max gap-x-1 items-center text-white/60'
               >
                 {/* title */}
                 <div className='font-light mb-2 md:mb-0'>{item.title}</div>
@@ -208,7 +208,7 @@ const About = () => {
                     <div className='flex gap-x-4'>
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex)=> {
-                      return <div key={itemIndex} className='text-2xl text-white'>{icon}</div>
+                      return <div key={itemIndex} className='text-1 xl text-white'>{icon}</div>
                     })}
                     </div>
                   </div>
